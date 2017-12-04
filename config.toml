@@ -1,3 +1,20 @@
 baseURL = "http://localhost"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Piatto della Caldaia"
+theme = "hugo-theme-air"
+
+[params]
+  description = "A very beautyfull site"
+  cover = "static/download.jpg"
+  author = "syui"
+  authorlocation = ""
+  authorwebsite = "http://syui.github.io/hugo-theme-air"
+  bio= "my bio"
+  logo = "images/user.png"
+  googleAnalyticsUserID = ""
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  RSSLink = ""
+  githubName = "syui"
+  twitterName = ""
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
