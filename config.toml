@@ -6,10 +6,10 @@ theme = "hugo-theme-air"
 [params]
   description = "A very beautyful site"
   cover = "static/download.jpg"
-  author = "syui"
+  author = "Leonardo Longhi"
   authorlocation = ""
-  authorwebsite = "http://syui.github.io/hugo-theme-air"
-  bio= "my bio"
+  authorwebsite = "www.datarecipe.cloud"
+  bio= "the best author of ever"
   logo = "images/user.png"
   googleAnalyticsUserID = ""
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
