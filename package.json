@@ -1,0 +1,26 @@
+{
+  "name": "vagrant",
+  "version": "1.0.0",
+  "description": "This is a pre-release of the WOW project. Its goal is to show why JAMstack architecture and HUGO are valuable tools for this project, and understand how we can work with theme. ## Getting Started These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. ### Prerequisites * Install [Vagrant](https://www.vagrantup.com/docs/installation/) * Clone the repository",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js && hugo",
+    "dev": "./node_modules/webpack/bin/webpack.js -w",
+    "server": "./node_modules/webpack/bin/webpack.js && hugo server -D --bind '0.0.0.0'",
+    "deploy": "echo 'Coming soon...'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://miahmohd@bitbucket.org/dark_things/boilerplate_wov1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/dark_things/boilerplate_wov1#readme"
+}

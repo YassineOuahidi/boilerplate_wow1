@@ -9,6 +9,7 @@ $script = <<-SCRIPT
     bash nodesource_setup.sh
     apt-get install -y nodejs
     apt-get install -y build-essential
+    npm install --no-bin-links
 
     ###########################      Hugo      ###########################
     wget -q https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
