@@ -4,16 +4,19 @@
 $script = <<-SCRIPT
 	apt-get update
 
-    ###########################     Node and npm        ###########################
+    ###########################       Node and npm      ###########################
     curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
     bash nodesource_setup.sh
     apt-get install -y nodejs
     apt-get install -y build-essential
-    npm install --no-bin-links
 
-    ###########################      Hugo      ###########################
+    ###########################          Hugo           ###########################
     wget -q https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
     dpkg -i hugo*.deb
+
+    ##### Bootstrap #####
+    cd /vagrant
+    npm install --no-bin-links
 SCRIPT
 
 

@@ -1,42 +1,37 @@
-# Winning Offering Workbench 
+# Winning Offering Workbench
 ### (boilerplate)
 This is a pre-release of the WOW project. Its goal is to show why JAMstack architecture and HUGO are valuable tools for this project, and understand how we can work with theme.
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 ### Prerequisites
 * Install [Vagrant](https://www.vagrantup.com/docs/installation/)
 * Clone the repository
 
-### Installing
+### Installation
 Open a terminal in the repository folder and run this command to create the vargant virtual machine
 ```shell
-vagrant up
+$ vagrant up
 ```
 Once it finish run:
 ```shell
-vagrant ssh
+$ vagrant ssh
 ```
 
-After that run this sctipt
+## Contributing
+### Scripts guide
+
+* Compile ES6 and stylesheets then listen for changes:
 ```shell
-#compile javascript and css
-dev
+$ npm run dev
 ```
+* Deploy development server on **[localhost:1313](localhost:1313)**
 ```shell
-#compile javasript and css and listen for changes
-npm run watch
+$ npm run server
 ```
-
+* Deploy production server:
 ```shell
-#deploy server on aerobatic
-npm run deploy
+$ npm run deploy
 ```
-
-```shell
-#deploy on localhost
-npm run server
-```
-
-
-
-
+You can edit the source files under `./static-src`, never edit compiled files under  `./public`.
