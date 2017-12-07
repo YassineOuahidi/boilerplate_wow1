@@ -4,7 +4,7 @@ title = "Piatto della Caldaia"
 theme = "hugo-theme-air"
 
 [params]
-  description = "A very beautyfull site"
+  description = "A very beautyful site"
   cover = "static/download.jpg"
   author = "syui"
   authorlocation = ""
