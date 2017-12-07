@@ -14,11 +14,14 @@ vagrant up
 ```
 Once it finish run:
 ```shell
+vagrant ssh
+```
+
+After that run this sctipt
+```shell
 #compile javascript and css
 dev
 ```
-After that run this sctipt
-
 ```shell
 #compile javasript and css and listen for changes
 npm run watch
