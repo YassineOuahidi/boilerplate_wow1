@@ -1,4 +1,4 @@
-baseURL = "http://www.codevision.cloud"
+baseURL = "http://www.codevision.cloud/"
 languageCode = "en-us"
 title = "Piatto della Caldaia"
 theme = "hugo-theme-air"
