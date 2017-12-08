@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{.Site.Title}}</title>
+    {{partial "header.html" . }}
+</head>
+<body class="container">
+    <h1>{{ .Title }}</h1>
+    <div class="card">
+      <div class="card-body">
+        {{.Content}}
+    </div>
+   <!--  {{ with .Params.tags }}
+    Tags:
+    <ul >
+      {{ range . }}
+        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }} -->
+</div>
+{{ partial "footer.html" . }}
+</body>
+</html>
