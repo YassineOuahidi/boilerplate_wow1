@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js && hugo",
+    "build": "./node_modules/webpack/bin/webpack.js && hugo -D",
     "dev": "./node_modules/webpack/bin/webpack.js -w",
     "server": "./node_modules/webpack/bin/webpack.js && hugo server -D --bind '0.0.0.0'",
     "deploy": "echo './node_modules/webpack/bin/webpack.js && hugo'"
