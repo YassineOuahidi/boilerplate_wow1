@@ -6,5 +6,9 @@ ga(function(tracker) {
 
 $('#form').submit(function (e) {
     $('#ga').val(clientId);
+    if($('#MERGE0').val()==''){
+        e.preventDefault();
+        alert('Inserisci una email')
+    }
 })
 
