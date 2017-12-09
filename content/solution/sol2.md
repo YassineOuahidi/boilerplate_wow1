@@ -1,7 +1,9 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-date: {{ .Date }}
+title: "Un'altra soluzione"
+date: 2017-12-04T00:27:19+01:00
 draft: true
+author: Miah
+tags: [Two,Three,Four]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

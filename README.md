@@ -26,7 +26,7 @@ $ vagrant ssh
 ```shell
 $ npm run dev
 ```
-* Deploy development server on **[localhost:1313](localhost:1313)**
+* Run development server on **[localhost:1313](localhost:1313)** after compiling static files:
 ```shell
 $ npm run server
 ```

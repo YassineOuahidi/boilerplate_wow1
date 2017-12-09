@@ -1,7 +1,8 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-date: {{ .Date }}
+title: "Quello diverso (fatto con typeform)"
+date: 2016-12-09T16:28:06Z
 draft: true
+tags: [Pizza]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

@@ -13,7 +13,7 @@
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js && hugo -D",
     "dev": "./node_modules/webpack/bin/webpack.js -w",
-    "server": "./node_modules/webpack/bin/webpack.js && hugo server -D --bind '0.0.0.0'",
+    "server": "./node_modules/webpack/bin/webpack.js && hugo -D && hugo server -D --bind '0.0.0.0'",
     "deploy": "./node_modules/webpack/bin/webpack.js && hugo -D"
   },
   "repository": {

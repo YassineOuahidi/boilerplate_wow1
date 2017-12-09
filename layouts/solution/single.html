@@ -9,7 +9,7 @@
   <div style="display: grid; grid-template-columns: repeat(12, 1fr); grid-column-gap: 10px;">
       {{ with .Params.tags }}
         {{ range . }}
-          <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="badge badge-primary">{{.}}</a>
+          <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="badge badge-warning">{{.}}</a>
         {{ end }}
       {{ end }}
     </div>
