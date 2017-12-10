@@ -14,7 +14,7 @@
     "build": "./node_modules/webpack/bin/webpack.js && hugo -D",
     "dev": "./node_modules/webpack/bin/webpack.js -w",
     "server": "./node_modules/webpack/bin/webpack.js && hugo -D && hugo server -D --bind '0.0.0.0'",
-    "deploy": "./node_modules/webpack/bin/webpack.js && hugo -D --theme=hugo-theme-air"
+    "deploy": "./node_modules/webpack/bin/webpack.js && hugo -D"
   },
   "repository": {
     "type": "git",
