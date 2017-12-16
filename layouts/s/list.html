@@ -8,15 +8,20 @@
 <body class="container">
 
   <div>
-      <h1 id="title">{{ .Title }}</h1>
+      <h1 id="title">Solutions</h1>
       {{ range .Data.Pages }}
       <article >
           <header>
             <h4><a href='{{ .Permalink }}'>{{ .Title }}</a> </h4>
+            {{range .tags}}
+              <li><button type="button" class="btn btn-outline-info btn-sm"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></button></li>
+  		{{ end }}
             <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
         </header>
         <footer>
-          <a href='{{ .Permalink }}'>Vai all'articolo</a>
+        	<button type="button" class="btn btn-outline-info btn-sm"><a href='{{ .Permalink }}'>show more</a></button>
+
+          
         </footer>
     </article>
     <br>
