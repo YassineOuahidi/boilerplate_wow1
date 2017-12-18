@@ -291,46 +291,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer section-dark" style="padding-top: 20px;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="">
-                        <button style="padding-right: 10px;" class="btn btn-just-icon btn-border btn-google">
-                            <i class="fa fa-google-plus" aria-hidden="true"></i>
-                        </button>
-                        <button style="padding-right: 10px;" class="btn btn-just-icon btn-border btn-linkedin">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </button>
-                        <button style="padding-right: 10px;" class="btn btn-just-icon btn-border btn-facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </button>
-                        <button style="padding-right: 10px;" class="btn btn-just-icon btn-border btn-twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </button>
-                        <button style="padding-right: 10px;" class="btn btn-just-icon btn-border btn-github">
-                            <i class="fa fa-github-alt" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="{{.Site.BaseURL}}">LinkedData.Center</a></li>
-                            <li><a href="{{.Site.BaseURL}}post">Blog</a></li>
-                            <li><a href="//www.iubenda.com/privacy-policy/8276533" class="" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></li>
-                        </ul>
-                    </nav>
-
-                    <div class="credits ml-auto">
-                        <span class="copyright">
-                            © <script>document.write(new Date().getFullYear())</script>, LinkedData.Center
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </footer>
+{{ partial "footer.html" . }}
     </body>
 
     <!-- Core JS Files -->
