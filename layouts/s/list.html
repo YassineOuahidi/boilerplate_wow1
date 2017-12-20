@@ -13,7 +13,7 @@
       <article >
           <header>
             <h4><a href='{{ .Permalink }}'>{{ .Title }}</a> </h4>
-            {{range .tags}}
+            {{range .Params.tags}}
               <li><button type="button" class="btn btn-outline-info btn-sm"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></button></li>
   		{{ end }}
             <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
@@ -21,7 +21,7 @@
         <footer>
         	<button type="button" class="btn btn-outline-info btn-sm"><a href='{{ .Permalink }}'>show more</a></button>
 
-          
+
         </footer>
     </article>
     <br>

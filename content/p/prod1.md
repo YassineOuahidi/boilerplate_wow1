@@ -2,7 +2,6 @@
 title: "Quello diverso (fatto con typeform)"
 date: 2016-12-09T16:28:06Z
 draft: true
-type = "product"
 tags: [Pizza]
 ---
 
