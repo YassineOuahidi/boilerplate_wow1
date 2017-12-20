@@ -1,41 +1,222 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  {{partial "header.html" . }}
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>LinkedData Center</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="{{.Site.BaseURL}}css/paper-kit.css?v=2.1.0" rel="stylesheet"/>
+  <!-- <link href="{{.Site.BaseURL}}css/demo.css" rel="stylesheet" /> -->
+
+  <!--     Fonts and icons     -->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{.Site.BaseURL}}css/nucleo-icons.css" rel="stylesheet">
+
+  <!-- Core js files -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
+  <script defer src="{{.Site.BaseURL}}js/paper-kit.js?v=2.1.0"></script>
+
 </head>
-<body class="container">
-  <h2>{{ .Title }}</h2>
-  <br>
-  <div style="display: grid; grid-template-columns: repeat(12, 1fr); grid-column-gap: 10px;">
-      {{ with .Params.tags }}
-        {{ range . }}
-          <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="badge badge-warning">{{.}}</a>
-        {{ end }}
-      {{ end }}
-    </div>
-    <br>
-  <div class="blockquote">
-    {{.Content}}
-  </div>
-  <br>
-<div id="form_container">
- <!--  <form class="col-md-5" id="form" action="https://cloud.us17.list-manage.com/subscribe/post" method="POST">
-    <input type="hidden" name="u" value="776c09c36150b0e9b541ff145">
-    <input type="hidden" name="id" value="1b379339ba">
-    <input id="ga" type="hidden" name="MERGE3" id="MERGE3" size="25" value="">
-    <div class="form-group">
-      <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
-      <input class="form-control" type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
-    </div>
-    <div class="form-group">
-      <input class="form-control btn btn-primary" type="submit" class="formEmailButton" name="submit" value="Subscribe to list">
-    </div>
-  </form> -->
-</div>
+<body>
+  <!-- TODO rimpicciolire o rendere fissa la navbar, da fastidio -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent nav-down" color-on-scroll="200 ">
+    <div class="container">
+      <div class="navbar-translate">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{.Site.BaseURL}}">LinkedData.Center</a>
+        </div>
+        <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-danger">
+              <a class="dropdown-item" href="#prodotto"><i class="nc-icon nc-tile-56"></i>&nbsp; Prodotto</a>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="javascript:void(0)">Solutions</a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-danger">
+              <a class="dropdown-item" href="{{.Site.BaseURL}}solution"><i class="nc-icon nc-bank"></i>&nbsp; Solution</a>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <!-- TODO header differenti per prodotto, la stessa con colori diversi-->
+  <!-- <div class="page-header" data-parallax="true" style="background-image: url('../img/research-topology.jpg');"> -->
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('/img/net2.png');min-height: 10vh !important;">
+      <div class="filter"></div>
+    </div>
+    <div class="row" >
+          <div class="icon icon-default" style="margin-left: 5vh;margin-top: 5vh" >
+            <i class="nc-icon nc-diamond" style="font-size: 70px"></i>
+          </div>
+          <div class="description" style="margin-top: 2vh; margin-left: 2vh" >
+            <h1 class="info-title">{{.Title}}</h1>
+          </div>
+    </div>
 
-  <br>
-  {{ partial "footer.html" . }}
-</body>
-</html>
+    <div class="wrapper">
+      <div class="section landing-section">
+        <div class="container">
+           <h5>{{ .Params.how}}</h5>
+        </div>
+        </div>
+
+        <div class="section section-gray landing-section">
+          <div class="container">
+            <div class="row">
+              <div class=" ml-auto mr-auto">
+                <div class="row">
+                  <div class="icon icon-default" style="margin-top: 2vh" >
+                    <i class="nc-icon nc-bulb-63" style="font-size: 60px"></i>
+                  </div>
+                  <h2 class="title" style="margin-left: 2vh" >Quali benefici?</h2>
+                </div>
+                <h5>{{.Params.benefits}}</h5>
+                <br />
+              </div>
+            </div>
+            <br>  <br>
+          </div>
+        </div>
+
+        <div class="section landing-section">
+          <div class="container">
+            <div class="row">
+              <div class=" ml-auto mr-auto">
+                <div class="row pull-right">
+                  <h2 class="title" style="margin-left: 2vh" >Perchè LinkedData.center</h2>
+                  <div class="icon icon-default" style="margin-top: 2vh;margin-left: 2vh" >
+                    <i class="nc-icon nc-key-25" style="font-size: 60px"></i>
+                  </div>
+                </div>
+                <div class="row pull-right" style="text-align: right;">
+                <h5>{{.Params.why_ldc}}</h5>
+                <div>
+                <br />
+              </div>
+            </div>
+            <br>  <br>
+          </div>
+        </div>
+<!--
+        <div class="section section-gray landing-section">
+          <div class="container">
+            <div class="row">
+              <div class=" ml-auto mr-auto">
+                <h2 class="title" >Input output</h2>
+                <h5>Fidati che funziona</h5>
+                <br />
+              </div>
+            </div>
+            <br>  <br>
+            <div class="row">
+              <div class="col-md">
+                <div class="info info-horizontal">
+                  <div class="icon icon-default" >
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Passo 1</h4>
+                    <h5 class="info-title">Inserisci i dati</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="info info-horizontal">
+                  <div class="icon icon-default" >
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Passo 2</h4>
+                    <h5 class="info-title">Ricevi idati</h5>
+                    <p>Lavorerai con dati sempre aggiornati, senza nessuna preoccupazione</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section landing-section">
+          <div class="container">
+            <div class="row">
+              <div class=" ml-auto mr-auto">
+                <h2 class="title" >Quanto costa?</h2>
+                <h5>Fidati che funziona</h5>
+                <br />
+              </div>
+            </div>
+            <br>  <br>
+            <div class="row">
+              <div class="col-md">
+                <div class="info info-horizontal">
+                  <div class="icon icon-default" >
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Passo 1</h4>
+                    <h5 class="info-title">Inserisci i dati</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="info info-horizontal">
+                  <div class="icon icon-default" >
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Passo 2</h4>
+                    <h5 class="info-title">Ricevi idati</h5>
+                    <p>Lavorerai con dati sempre aggiornati, senza nessuna preoccupazione</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section section-gray landing-section">
+          <div class="container">
+            <div class="row">
+              <div class=" ml-auto mr-auto">
+                <h2 class="title" >Specifiche</h2>
+                <a href="#processo" class="btn btn-info btn-fill btn-round">Vai alla documentazione</a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+-->
+      </div>
+      {{ partial "footer.html" . }}
+    </body>
+    </html>
