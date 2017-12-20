@@ -2,27 +2,82 @@
 <html>
 <head>
 
-    {{partial "header.html" . }}
+  {{partial "header.html" . }}
 
 </head>
-<body class="container">
 
-  <div>
-      <h1 id="title">{{ .Title }}</h1>
-      {{ range .Data.Pages }}
-      <article >
-          <header>
-            
-            <h4><a href='{{ .Permalink }}'>{{ .Title }}</a> </h4>
-            <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-        </header>
-        <footer>
-          <a href='{{ .Permalink }}'>Vai all'articolo</a>
-        </footer>
-    </article>
-    <br>
-    {{ end }}
+
+
+
+<body>
+  <div class="page-header" data-parallax="true" style="background-image: url('../img/net2.png');">
+    <div class="filter"></div>
+    <div class="content-center">
+      <div class="container">
+        <div class="motto">
+          <h1 class="title">LinkedBlog.Center</h1>
+          <h3 class="description">Read to improve your knowledge</h3>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cd-section section-white" id="blogs">
+      <div class="blog-1" id="blog-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 ml-auto mr-auto">
+              <h2 class="title">Posts</h2>
+              <br />
+
+
+              {{ range .Data.Pages }}
+              <div class="card card-plain card-blog">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="card-image">
+                      <img class="img" src="{{ .Site.BaseURL }}img/{{ .Params.image}}" />
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <div class="row">
+                       {{ with .Params.tags }}
+                       {{ range . }}
+                       <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class= "card-category text-info" >{{.}} &ensp;</a>
+                       {{ end }}
+                       {{ end }}
+                     </div>
+                     <!-- class="card-category text-info" -->
+                     <!-- <h6 class="card-category text-info">jgfv</h6> -->
+                     <h3 class="card-title">
+                      <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <p class="card-description">
+                      {{ .Summary }}
+                    </p>
+<!--                 <p class="author">
+                  by <a href="#pablo"><b>Tim Merel</b></a>, 11 hours ago
+                </a> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+
+
+
+
+
 {{ partial "footer.html" . }}
 </body>
 </html>
