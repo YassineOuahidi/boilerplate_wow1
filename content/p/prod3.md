@@ -1,9 +1,9 @@
 ---
-title: "Prod1"
+title: "Prod3"
 date: 2016-12-09T16:28:06Z
 draft: true
 type: "product"
-tags: ["Pizza", "analizza"]
+tags: [Pizza]
 short_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 ---
 
