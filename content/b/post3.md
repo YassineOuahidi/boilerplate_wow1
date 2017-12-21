@@ -1,7 +1,7 @@
 ---
-title: "Hugo è potentissimo4"
+title: "Hugo è potentissimo2"
 image: "daniel-olahh.jpg"
-date: 2017-12-21T00:27:19+01:00
+date: 2017-12-14T00:27:19+01:00
 draft: true
 type: "b"
 tags: [Two,Three,Four,"analizza"]
