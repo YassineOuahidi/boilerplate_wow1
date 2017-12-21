@@ -139,7 +139,7 @@
           </div>
         </div>
       </div>
-      {{ $v1 := where .Site.Pages ".Params.type" "product"}}
+      {{ $v1 := where .Site.Pages ".Params.type" "p"}}
       {{ $v2 := where $v1 ".Params.tags" "intersect" .Params.tags}}
       {{if gt (len $v2) 0}}
       <div class="section section-image" style="background-image: url('../../img/login-image.jpg');">
