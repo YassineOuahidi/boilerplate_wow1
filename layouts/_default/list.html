@@ -19,7 +19,7 @@
         <div class="col-md-10 ml-auto mr-auto">
           <h2 class="title">LinkedBlog.Center</h2>
           <br />
-          
+
 
           {{ range .Data.Pages }}
           <div class="card card-plain card-blog">
@@ -61,23 +61,6 @@
   </div>
 </div>
 
-
-<div>
-  <!-- <h1 id="title">{{ .Title }}</h1> -->
-  {{ range .Data.Pages }}
-  <article >
-    <header>
-
-      <h4><a href='{{ .Permalink }}'>{{ .Title }}</a> </h4>
-      <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-    </header>
-    <footer>
-      <a href='{{ .Permalink }}'>Vai all'articolo</a>
-    </footer>
-  </article>
-  <br>
-  {{ end }}
-</div>
 {{ partial "footer.html" . }}
 </body>
 </html>

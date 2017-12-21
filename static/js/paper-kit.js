@@ -443,5 +443,3 @@ function hasScrolled() {
 
     lastScrollTop = st;
 };
-
-
