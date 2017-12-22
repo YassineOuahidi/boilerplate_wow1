@@ -1,32 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    {{partial "header.html" . }}
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
 </head>
-<body class="container">
-
-  <div>
-      <h1 id="title">Solutions</h1>
-      {{ range .Data.Pages }}
-      <article >
-          <header>
-            <h4><a href='{{ .Permalink }}'>{{ .Title }}</a> </h4>
-            {{range .Params.tags}}
-              <li><button type="button" class="btn btn-outline-info btn-sm"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></button></li>
-  		{{ end }}
-            <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-        </header>
-        <footer>
-        	<button type="button" class="btn btn-outline-info btn-sm"><a href='{{ .Permalink }}'>show more</a></button>
-
-
-        </footer>
-    </article>
-    <br>
-    {{ end }}
-</div>
-{{ partial "footer.html" . }}
+<body>
+  ciao
 </body>
 </html>
