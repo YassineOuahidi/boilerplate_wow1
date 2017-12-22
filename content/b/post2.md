@@ -3,7 +3,7 @@ title: "Hugo è potentissimo4"
 image: "daniel-olahh.jpg"
 date: 2017-12-21T00:27:19+01:00
 draft: true
-type: "b"
+taaype: "b"
 tags: [Two,Three,Four,"analizza"]
 ---
 
